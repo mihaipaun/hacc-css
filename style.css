@@ -10,8 +10,8 @@ body {
 
 #slides {
   width: 100%; height: 100%;
-  white-space: nowrap;
-  font-size: 0;
+  white-space: nowrap; /* the #slides container requires that none of its .slide children wrap */
+  font-size: 0; /* removes any gaps between the slides when displayed horizontally */
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
@@ -22,9 +22,10 @@ body {
 .slide {
   width: 100%; height: 100%;
   display: inline-block;
-  background-size: cover;
+  background-size: cover; /* makes sure that the slide's background covers the entire element, regardless of its width and height */
 }
 
+/* tells WebKit to animate all of its properties using the ease-out path over 300 milliseconds */
 .animate {
   -webkit-transition: all .3s ease-out;
   -moz-transition: all .3s ease-out;
@@ -33,6 +34,7 @@ body {
   transition: all .3s ease-out;
 }
 
+/* here we specify different dimensions in order to get different images */
 .slide:nth-child(1) { background: url(http://placekitten.com/640/480);}
 .slide:nth-child(2) { background: url(http://placekitten.com/641/480);}
 .slide:nth-child(3) { background: url(http://placekitten.com/642/480);}
