@@ -4,7 +4,7 @@ html, body {
 
 body {
   margin: 0;
-  overflow: visible;
+  overflow: hidden; /* changed from visible to hidden to get rid of the default scrolling functionality */
   background: #333;
 }
 
